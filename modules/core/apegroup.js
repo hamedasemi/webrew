@@ -7,7 +7,7 @@ import { debug, error, info } from '~/modules/@webrew/helpers-log'
 let processArgumentsList = process.argv
 let processArgumentsString = JSON.stringify(process.argv)
 
-debug('Raw process argv:', processArgumentsString)
+debug(`Raw process argv:`, processArgumentsString)
 
 // Extract input list out of process arguments
 let inputList = processArgumentsList.filter((input) => {
@@ -25,12 +25,12 @@ let optionsList = inputList.filter((input) => {
 })
 
 
-let category = commandsList[0] || 'default'
-let command = commandsList[1] || 'default'
+let category = commandsList[0] || `default`
+let command = commandsList[1] || `default`
 
-debug('Extracted commands list:', commandsList)
-debug('Extracted options list:', optionsList)
-info('Category:', category, 'Command:', command)
+debug(`Extracted commands list:`, commandsList)
+debug(`Extracted options list:`, optionsList)
+info(`Category:`, category, `Command:`, command)
 
 
 let execute = new Execute({
