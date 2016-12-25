@@ -1,4 +1,4 @@
-## WebBrew CLI (ALPHA) ![webrew](https://raw.githubusercontent.com/hamedasemi/webrew/mainline/assets/images/webrew.svg)
+## WebBrew CLI (ALPHA) ![webrew](https://raw.githubusercontent.com/hamedasemi/webrew/mainline/assets/images/webrew.png)
 
 ![Version](https://img.shields.io/npm/v/webrew.svg)
 ![Download](https://img.shields.io/npm/dm/webrew.svg)
