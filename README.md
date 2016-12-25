@@ -1,4 +1,8 @@
-## WebBrew CLI (ALPHA) ![alt](https://img.shields.io/npm/v/webrew.svg)
+## WebBrew CLI (ALPHA)
+
+![Version](https://img.shields.io/npm/v/webrew.svg)
+![Download](https://img.shields.io/npm/dm/webrew.svg)
+
 ###### by Hamed Asemi
 
 -------------------------------------------- <br><br>
