@@ -9,7 +9,8 @@
 
 ![webrew](https://raw.githubusercontent.com/hamedasemi/webrew/mainline/assets/images/webrew.png)
 
--------------------------------------------- <br><br>
+
+## Simple usage
 
 __Installation__ the latest version globally
 
