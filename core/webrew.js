@@ -1,8 +1,6 @@
+import { debug, info } from 'webrew-helpers-log'
+
 import Execute from '~/modules/core/execute'
-
-import { log } from 'console'
-
-import { debug, error, info } from '~/modules/@webrew/helpers-log'
 
 let processArgumentsList = process.argv
 let processArgumentsString = JSON.stringify(process.argv)
