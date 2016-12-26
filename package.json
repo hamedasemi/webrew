@@ -27,12 +27,12 @@
     "bin": {
         "webrew": "./bin/webrew"
     },
-    "main": "./dist/modules/core/webrew.js",
+    "main": "./dist/core/webrew.js",
     "scripts": {
         "link": "npm run clean && npm link",
         "clean": "rm -r ./dist",
-        "prepublish": "babel --no-babelrc ./  --out-dir ./dist --ignore dist,node_modules --presets=es2015,stage-3,stage-0,babel-polyfill --plugins=transform-runtime,babel-root-import --source-maps=inline",
-        "start": "node --require babel-register --require babel-polyfill ./starter ",
+        "start": "node ./dist/core/webrew.js",
+        "build": "babel --no-babelrc ./  --out-dir ./dist --ignore dist,node_modules --presets=es2015,stage-3,stage-0,babel-polyfill --plugins=transform-runtime,babel-root-import --source-maps=inline",
         "test": "mocha --watch --require babel-polyfill --compilers js:babel-register ./modules/**/*.test.js"
     },
     "repository": {
@@ -75,6 +75,8 @@
         "request": "^2.79.0",
         "stream-combiner2": "^1.1.1",
         "unzip": "^0.1.11",
+        "webrew-helpers-debug": "0.0.2",
+        "webrew-helpers-log": "0.0.7",
         "yauzl": "^2.7.0"
     }
 }
