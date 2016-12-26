@@ -1,10 +1,10 @@
 
-import { debug, error, info } from '~/modules/@webrew/helpers-log'
+import { debug, error, info } from 'webrew-helpers-log'
 
 export class Execute {
     constructor(data){
         debug(data.category, data.command, data.options)
-        require(`./../@webrew/${data.category}-${data.command}`)
+        require(`./../${data.category}/${data.command}`)
     }
 }
 
