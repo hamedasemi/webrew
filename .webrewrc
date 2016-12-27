@@ -5,7 +5,7 @@ elements:
   - "./client/+(components|elements|shared)/**/*.js"
   markups:
   - "./client/+(components|elements|shared)/**/*.html"
-  - "./client/index.html"
+  - "./client/*.html"
 data: "./www/assets/data"
 api:
   url: api.phraseapp.com/api/v2
