@@ -1,5 +1,5 @@
 {
-    "name": "@webrew/gulp-transpile",
+    "name": "webrew-gulp-task-transpile",
     "version": "0.0.0",
     "description": "",
     "main": "index.js",
