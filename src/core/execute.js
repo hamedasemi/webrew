@@ -1,10 +1,17 @@
 
-import { debug, error, info } from 'webrew-helpers-log'
+import { debug, error } from 'webrew-helpers-log'
 
 export class Execute {
     constructor(data){
-        debug(data.category, data.command, data.options)
-        require(`./../${data.category}/${data.command}`)
+        debug(`Constructed:`, data)
+        try {
+            require(`./../${data.category}/${data.command}`)
+            debug(`category:`, data.category, `command:`,  data.command, `options:`, data.options)
+        }
+        catch(err){
+            error(`Make sure command '${data.command}' and category '${data.category}' exist.`)
+            error(`Original error:`, err)
+        }
     }
 }
 
