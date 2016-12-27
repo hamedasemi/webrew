@@ -3,7 +3,8 @@
 ![Version](https://img.shields.io/npm/v/webrew.svg)
 ![Download](https://img.shields.io/npm/dm/webrew.svg)
 [![Build Status](https://travis-ci.org/hamedasemi/webrew.svg?branch=mainline)](https://travis-ci.org/hamedasemi/webrew)
-[![Coverage Status](https://coveralls.io/repos/github/hamedasemi/cv/badge.svg?branch=mainline)](https://coveralls.io/github/hamedasemi/cv?branch=mainline)
+![License](https://img.shields.io/npm/l/webrew.svg)
+![License](https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg)
 
 ###### by Hamed Asemi
 
