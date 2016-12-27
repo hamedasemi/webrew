@@ -6,7 +6,7 @@ export class Execute {
     constructor(data) {
         debug(`Constructed:`, data)
         try {
-            require(`./../${data.category}/${data.command}`)
+            // require(`./../${data.category}/${data.command}`)
             debug(`category:`, data.category, `command:`, data.command, `options:`, data.options)
 
             spawn(`gulp`, [
