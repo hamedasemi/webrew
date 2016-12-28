@@ -14,6 +14,8 @@ export class Execute {
             debug(`process.cwd()`, process.cwd())
             spawn(`gulp`, [
                 `${data.command}`,
+                `--require`,
+                `babel-register`,
                 `--gulpfile=./node_modules/webrew/dist/gulp/index.js`,
                 `--cwd=./`,
             ], { stdio: `inherit` })
