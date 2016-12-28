@@ -1,0 +1,47 @@
+'use strict';
+
+var _stringify = require('babel-runtime/core-js/json/stringify');
+
+var _stringify2 = _interopRequireDefault(_stringify);
+
+var _webrewHelpersLog = require('webrew-helpers-log');
+
+var _execute = require('./execute');
+
+var _execute2 = _interopRequireDefault(_execute);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var processArgumentsList = process.argv;
+var processArgumentsString = (0, _stringify2.default)(process.argv);
+
+(0, _webrewHelpersLog.debug)('Raw process argv:', processArgumentsString);
+
+// Extract input list out of process arguments
+var inputList = processArgumentsList.filter(function (input) {
+    return !input.search(/[A-Z,a-z,-]/ig);
+});
+
+// Extract commands out of input list
+var commandsList = inputList.filter(function (input) {
+    return input.search(/(--|-)/g);
+});
+
+// Extract options out of input list
+var optionsList = inputList.filter(function (input) {
+    return !input.search(/(--|-)/g);
+});
+
+var category = commandsList[0] || 'default';
+var command = commandsList[1] || 'default';
+
+(0, _webrewHelpersLog.debug)('Extracted commands list:', commandsList);
+(0, _webrewHelpersLog.debug)('Extracted options list:', optionsList);
+(0, _webrewHelpersLog.info)('Category:', category, 'Command:', command);
+
+var execute = new _execute2.default({
+    category: category,
+    command: command,
+    options: optionsList
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb3JlL3dlYnJldy5qcyJdLCJuYW1lcyI6WyJwcm9jZXNzQXJndW1lbnRzTGlzdCIsInByb2Nlc3MiLCJhcmd2IiwicHJvY2Vzc0FyZ3VtZW50c1N0cmluZyIsImlucHV0TGlzdCIsImZpbHRlciIsImlucHV0Iiwic2VhcmNoIiwiY29tbWFuZHNMaXN0Iiwib3B0aW9uc0xpc3QiLCJjYXRlZ29yeSIsImNvbW1hbmQiLCJleGVjdXRlIiwib3B0aW9ucyJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7O0FBRUE7Ozs7OztBQUVBLElBQUlBLHVCQUF1QkMsUUFBUUMsSUFBbkM7QUFDQSxJQUFJQyx5QkFBeUIseUJBQWVGLFFBQVFDLElBQXZCLENBQTdCOztBQUVBLGtEQUEyQkMsc0JBQTNCOztBQUVBO0FBQ0EsSUFBSUMsWUFBWUoscUJBQXFCSyxNQUFyQixDQUE0QixVQUFDQyxLQUFELEVBQVc7QUFDbkQsV0FBTyxDQUFDQSxNQUFNQyxNQUFOLENBQWEsZUFBYixDQUFSO0FBQ0gsQ0FGZSxDQUFoQjs7QUFJQTtBQUNBLElBQUlDLGVBQWVKLFVBQVVDLE1BQVYsQ0FBaUIsVUFBQ0MsS0FBRCxFQUFXO0FBQzNDLFdBQU9BLE1BQU1DLE1BQU4sQ0FBYSxTQUFiLENBQVA7QUFDSCxDQUZrQixDQUFuQjs7QUFJQTtBQUNBLElBQUlFLGNBQWNMLFVBQVVDLE1BQVYsQ0FBaUIsVUFBQ0MsS0FBRCxFQUFXO0FBQzFDLFdBQU8sQ0FBQ0EsTUFBTUMsTUFBTixDQUFhLFNBQWIsQ0FBUjtBQUNILENBRmlCLENBQWxCOztBQUtBLElBQUlHLFdBQVdGLGFBQWEsQ0FBYixjQUFmO0FBQ0EsSUFBSUcsVUFBVUgsYUFBYSxDQUFiLGNBQWQ7O0FBRUEseURBQWtDQSxZQUFsQztBQUNBLHdEQUFpQ0MsV0FBakM7QUFDQSx5Q0FBa0JDLFFBQWxCLGNBQXdDQyxPQUF4Qzs7QUFHQSxJQUFJQyxVQUFVLHNCQUFZO0FBQ3RCRixjQUFVQSxRQURZO0FBRXRCQyxhQUFTQSxPQUZhO0FBR3RCRSxhQUFTSjtBQUhhLENBQVosQ0FBZCIsImZpbGUiOiJ3ZWJyZXcuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBkZWJ1ZywgaW5mbyB9IGZyb20gJ3dlYnJldy1oZWxwZXJzLWxvZydcblxuaW1wb3J0IEV4ZWN1dGUgZnJvbSAnLi9leGVjdXRlJ1xuXG5sZXQgcHJvY2Vzc0FyZ3VtZW50c0xpc3QgPSBwcm9jZXNzLmFyZ3ZcbmxldCBwcm9jZXNzQXJndW1lbnRzU3RyaW5nID0gSlNPTi5zdHJpbmdpZnkocHJvY2Vzcy5hcmd2KVxuXG5kZWJ1ZyhgUmF3IHByb2Nlc3MgYXJndjpgLCBwcm9jZXNzQXJndW1lbnRzU3RyaW5nKVxuXG4vLyBFeHRyYWN0IGlucHV0IGxpc3Qgb3V0IG9mIHByb2Nlc3MgYXJndW1lbnRzXG5sZXQgaW5wdXRMaXN0ID0gcHJvY2Vzc0FyZ3VtZW50c0xpc3QuZmlsdGVyKChpbnB1dCkgPT4ge1xuICAgIHJldHVybiAhaW5wdXQuc2VhcmNoKC9bQS1aLGEteiwtXS9pZylcbn0pXG5cbi8vIEV4dHJhY3QgY29tbWFuZHMgb3V0IG9mIGlucHV0IGxpc3RcbmxldCBjb21tYW5kc0xpc3QgPSBpbnB1dExpc3QuZmlsdGVyKChpbnB1dCkgPT4ge1xuICAgIHJldHVybiBpbnB1dC5zZWFyY2goLygtLXwtKS9nKVxufSlcblxuLy8gRXh0cmFjdCBvcHRpb25zIG91dCBvZiBpbnB1dCBsaXN0XG5sZXQgb3B0aW9uc0xpc3QgPSBpbnB1dExpc3QuZmlsdGVyKChpbnB1dCkgPT4ge1xuICAgIHJldHVybiAhaW5wdXQuc2VhcmNoKC8oLS18LSkvZylcbn0pXG5cblxubGV0IGNhdGVnb3J5ID0gY29tbWFuZHNMaXN0WzBdIHx8IGBkZWZhdWx0YFxubGV0IGNvbW1hbmQgPSBjb21tYW5kc0xpc3RbMV0gfHwgYGRlZmF1bHRgXG5cbmRlYnVnKGBFeHRyYWN0ZWQgY29tbWFuZHMgbGlzdDpgLCBjb21tYW5kc0xpc3QpXG5kZWJ1ZyhgRXh0cmFjdGVkIG9wdGlvbnMgbGlzdDpgLCBvcHRpb25zTGlzdClcbmluZm8oYENhdGVnb3J5OmAsIGNhdGVnb3J5LCBgQ29tbWFuZDpgLCBjb21tYW5kKVxuXG5cbmxldCBleGVjdXRlID0gbmV3IEV4ZWN1dGUoe1xuICAgIGNhdGVnb3J5OiBjYXRlZ29yeSxcbiAgICBjb21tYW5kOiBjb21tYW5kLFxuICAgIG9wdGlvbnM6IG9wdGlvbnNMaXN0XG59KSJdfQ==
