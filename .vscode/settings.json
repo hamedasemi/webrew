@@ -3,7 +3,7 @@
         "**/bower_components": true,
         "**/node_modules": false,
         "**/bin": false,
-        "**/.git": false,
+        "**/.git": true,
         "**/.editorconfig": false,
         "**/.vscode": false,
         "**/.bowerrc": false,
