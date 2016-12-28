@@ -13,23 +13,22 @@
 
 ## Features 1.0
 
-- Explicit cuncorrent commands capture
-- A user GUI to prompt and read settings and prefrences
-- Nginx HTTP, HTTPS proxy server to secure and accelerates Nodejs apps
 - HTTP/2.0 compatible server for both development and production
 - Built in Koa@2.0 server and middleware support
 - Stream static content
-- Protects resource share cross origin
 - HTML5 push state support and Mod ReWrtie
+- Gulp transpile ES201x Polymer2 and Angular2 to ES5 JavaScript
 - Browser sync changes while development
 
 
 ## Features 2.0
-
+- Protects resource share cross origin
+- Nginx HTTP, HTTPS proxy server to secure and accelerates Nodejs apps
+- A user GUI to prompt and read settings and prefrences
+- Explicit cuncorrent commands capture
 - Auto setup Test environment
 - Auto setup development environments(Docker, Local)
 - Enhance Github project start up
-- Gulp transpile ES201x Polymer2 and Angular2 to ES5 JavaScript
 - Auto setup CI(Travis CI), CD(Trunk Based Development) and pipeline
 - Using multiple repositories to compose & build up the project
 - Render the project template usin srting replace
