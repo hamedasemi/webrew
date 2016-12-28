@@ -3,7 +3,7 @@
   "webrewrc": {
     "port": "8080"
   },
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Brew a web project.",
   "babel": {
     "presets": [
@@ -48,8 +48,7 @@
     "url": "https://github.com/hamedasemi/webrew/issues"
   },
   "homepage": "https://github.com/hamedasemi/webrew#readme",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.1",
