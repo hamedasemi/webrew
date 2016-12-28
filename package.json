@@ -29,6 +29,7 @@
   },
   "main": "./dist/core/webrew.js",
   "scripts": {
+    "prewebrew": "npm run build",
     "webrew": "./bin/webrew",
     "link": "npm run clean && npm link",
     "clean": "rm -r ./dist",
