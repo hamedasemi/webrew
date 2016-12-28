@@ -8,15 +8,14 @@ export class Execute {
         try {
             // require(`./../${data.category}/${data.command}`)
             debug(`category:`, data.category, `command:`, data.command, `options:`, data.options)
-
+            debug(process.argv[1])
+            debug(`--gulpfile=${process.argv[1]}/../dist/gulp/index.js`)
             spawn(`gulp`, [
                 `${data.command}`,
-                `--gulpfile=./src/gulp/index.js`,
+                `--gulpfile=${process.argv[1]}/dist/gulp/index.js`,
                 `--cwd=./`,
                 `--require`,
                 `babel-register`,
-                `--require`,
-                `babel-polyfill`
             ], { stdio: `inherit` })
         }
         catch (err) {
