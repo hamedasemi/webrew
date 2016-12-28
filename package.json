@@ -3,7 +3,7 @@
   "webrewrc": {
     "port": "8080"
   },
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Brew a web project.",
   "babel": {
     "presets": [
