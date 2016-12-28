@@ -3,6 +3,10 @@ node_js:
   - "6.0"
 env:
   - APP_VERSION=default
+deploy:
+  provider: npm
+  email: h-@live.se
+  api_key: $NPM_API_KEY
 before_install:
   - npm run clean
 install:
