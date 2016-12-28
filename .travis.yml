@@ -7,7 +7,7 @@ deploy:
   provider: npm
   email: h-@live.se
   api_key:
-    secure: NPM_API_KEY
+    secure: 7d51c380-6502-47d1-8424-6463d62e60da
   on:
     repo: hamedasemi/webrew
     branch: mainline
