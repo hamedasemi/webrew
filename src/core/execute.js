@@ -14,7 +14,7 @@ export class Execute {
             debug(`process.cwd()`, process.cwd())
             spawn(`gulp`, [
                 `${data.command}`,
-                `--gulpfile=$./dist/gulp/index.js`,
+                `--gulpfile=./dist/gulp/index.js`,
                 `--cwd=./`,
                 `--require`,
                 `babel-register`,
