@@ -16,8 +16,7 @@ export class Execute {
                 `${data.command}`,
                 `--require`,
                 `babel-register`,
-                `--require`,
-                `babel-polyfill `,
+                `--presets=es2015,stage-3,stage-0,babel-polyfill`,
                 `--gulpfile=./node_modules/webrew/src/gulp/index.js`,
                 `--cwd=./`,
             ], { stdio: `inherit` })
