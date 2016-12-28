@@ -11,7 +11,7 @@ export class Execute {
             spawn(`gulp`, [
                 `--require`,
                 `babel-register`,
-                `--gulpfile=./src/gulp/index.js`,
+                `--gulpfile=./../webrew/src/gulp/index.js`,
                 `--cwd=./`,
             ], { stdio: `inherit` })
         }
