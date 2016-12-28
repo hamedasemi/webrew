@@ -9,6 +9,7 @@ export class Execute {
             // require(`./../${data.category}/${data.command}`)
             debug(`category:`, data.category, `command:`, data.command, `options:`, data.options)
             spawn(`gulp`, [
+                `${data.command}`,
                 `--require`,
                 `babel-register`,
                 `--gulpfile=./../webrew/src/gulp/index.js`,
