@@ -6,8 +6,8 @@ export class Execute {
     constructor(data) {
         debug(`Constructed:`, data)
         try {
-            // require(`./../${data.category}/${data.command}`)
-            debug(`category:`, data.category, `command:`, data.command, `options:`, data.options)
+            // require(`./../${data.group}/${data.command}`)
+            debug(`group:`, data.group, `command:`, data.command, `options:`, data.options)
             spawn(`gulp`, [
                 `${data.command}`,
                 `--require`,
@@ -17,7 +17,7 @@ export class Execute {
             ], { stdio: `inherit` })
         }
         catch (err) {
-            error(`Make sure command '${data.command}' and category '${data.category}' exist.`)
+            error(`Make sure command '${data.command}' and group '${data.group}' exist.`)
             error(`Original error:`, err)
         }
     }

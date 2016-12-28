@@ -23,16 +23,16 @@ let optionsList = inputList.filter((input) => {
 })
 
 
-let category = commandsList[0] || `default`
+let group = commandsList[0] || `default`
 let command = commandsList[1] || `default`
 
 debug(`Extracted commands list:`, commandsList)
 debug(`Extracted options list:`, optionsList)
-info(`Category:`, category, `Command:`, command)
+info(`Group:`, group, `Command:`, command)
 
 
 let execute = new Execute({
-    category: category,
+    group: group,
     command: command,
     options: optionsList
 })
