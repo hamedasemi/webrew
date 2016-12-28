@@ -8,11 +8,13 @@ export class Execute {
         try {
             // require(`./../${data.category}/${data.command}`)
             debug(`category:`, data.category, `command:`, data.command, `options:`, data.options)
-            debug(process.argv[1])
-            debug(`--gulpfile=${process.argv[1]}/../dist/gulp/index.js`)
+            debug(`process.argv[1]`, process.argv[1])
+            debug(`process.env.PWD`, process.env.PWD)
+            debug(`process.env.CWD`, process.env.CWD)
+            debug(`process.cwd()`, process.cwd())
             spawn(`gulp`, [
                 `${data.command}`,
-                `--gulpfile=${process.argv[1]}/dist/gulp/index.js`,
+                `--gulpfile=$./dist/gulp/index.js`,
                 `--cwd=./`,
                 `--require`,
                 `babel-register`,
