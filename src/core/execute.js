@@ -16,7 +16,7 @@ export class Execute {
                 `${data.command}`,
                 `--require`,
                 `babel-register`,
-                `--gulpfile=./node_modules/webrew/dist/gulp/index.js`,
+                `--gulpfile=./node_modules/webrew/src/gulp/index.js`,
                 `--cwd=./`,
             ], { stdio: `inherit` })
         }
