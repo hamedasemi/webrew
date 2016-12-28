@@ -7,7 +7,7 @@ deploy:
   provider: npm
   email: h-@live.se
   api_key:
-    secure: $NPM_API_KEY
+    secure: NPM_API_KEY
 before_install:
   - npm run clean
 install:
