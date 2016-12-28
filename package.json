@@ -34,7 +34,6 @@
     "link": "npm run clean && npm link",
     "clean": "rm -r ./dist",
     "prestart": "npm run build",
-    "prepublish": "npm run build",
     "build": "babel --no-babelrc ./src  --out-dir ./dist --ignore dist,node_modules --presets=es2015,stage-3,stage-0,babel-polyfill --plugins=transform-runtime,babel-root-import --source-maps=inline",
     "test": "mocha --watch --require babel-polyfill --compilers js:babel-register ./modules/**/*.test.js"
   },

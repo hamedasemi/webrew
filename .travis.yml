@@ -4,12 +4,12 @@ node_js:
 env:
   - APP_VERSION=default
 before_install:
-  - echo "before_install"
+  - npm run clean
 install:
-  - echo "install"
+  - npm install
 before_script:
-  - echo "before_script"
+  - npm run build
 script:
-  - echo "script"
+  - npm version patch
 after_success:
-  - echo "after_success"
+  - npm publish

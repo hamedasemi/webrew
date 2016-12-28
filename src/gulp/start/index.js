@@ -1,0 +1,17 @@
+
+import { error } from 'webrew-helpers-log'
+import { spawn } from 'cross-spawn'
+
+try {
+    spawn(`gulp`, [
+        `start`,
+        `--require`,
+        `babel-register`,
+        `--gulpfile=./../webrew/src/gulp/index.js`,
+        `--cwd=./`,
+    ], { stdio: `inherit` })
+}
+catch (err) {
+    error(`Gulp spawn error`)
+    error(`Original error:`, err)
+}
