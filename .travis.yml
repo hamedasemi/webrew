@@ -6,7 +6,7 @@ env:
 deploy:
   provider: npm
   email: h-@live.se
-  api_key: 7d51c380-6502-47d1-8424-6463d62e60da
+  api_key: NPM_API_KEY
   on:
     repo: hamedasemi/webrew
     branch: mainline
