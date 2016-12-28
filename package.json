@@ -27,7 +27,7 @@
   "bin": {
     "webrew": "./bin/webrew"
   },
-  "main": "./dist/core/webrew.js",
+  "main": "./src/core/webrew.js",
   "scripts": {
     "webrew": "./bin/webrew",
     "link": "npm run clean && npm link",
