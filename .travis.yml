@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "6.0"
+cache:
+  directories:
+    - node_modules
 env:
   - APP_VERSION=default
 deploy:
@@ -9,12 +12,10 @@ deploy:
   api_key:
     secure: $NPM_API_KEY
   on:
-    repo: hamedasemi/webrew
-    tags: true
     branch: mainline
-on:
-  repo: hamedasemi/webrew
-  tags: true
+    tags: true
+    repo: hamedasemi/webrew
+
 before_install:
   - npm run clean
 install:
