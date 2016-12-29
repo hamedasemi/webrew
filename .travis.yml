@@ -12,6 +12,9 @@ deploy:
     repo: hamedasemi/webrew
     tags: true
     branch: mainline
+on:
+  repo: hamedasemi/webrew
+  tags: true
 before_install:
   - npm run clean
 install:
