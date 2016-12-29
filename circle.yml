@@ -2,10 +2,6 @@
 
 
 machine:
-
-  timezone:
-    Sweden/Stockholm
-
   node:
     version: 6.0.0
 
@@ -16,19 +12,4 @@ deployment:
     branch: mainline
     commands:
       - echo 'working on tag'
-
-# dependencies:
-#   pre:
-#     - echo -e "$NPM_USER\n$NPM_PASS\n$NPM_EMAIL" | npm login
-#   override:
-#     - npm install --dev
-
-# test:
-#   post:
-#     - ./test.sh
-
-
-
-
-
 
