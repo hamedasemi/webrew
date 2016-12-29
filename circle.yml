@@ -7,7 +7,7 @@ machine:
 
 deployment:
   release:
-    tag: /v.*/
+    tag: /realease-.*/
     owner: hamedasemi
     branch: mainline
     commands:
