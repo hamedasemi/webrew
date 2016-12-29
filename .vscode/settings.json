@@ -10,7 +10,6 @@
         "**/.gitattributes": false,
         "**/.gitignore": false,
         "**/.gitkeep": false,
-        "**/dist": true,
         "**/.DS_Store": true
     },
     "files.associations": {},

@@ -17,7 +17,7 @@
         [
           {
             "rootPathPrefix": "~",
-            "rootPathSuffix": "./dist"
+            "rootPathSuffix": "./build"
           }
         ]
       ]
@@ -27,14 +27,14 @@
   "bin": {
     "webrew": "./bin/webrew"
   },
-  "main": "./dist/core/webrew.js",
+  "main": "./build/core/webrew.js",
   "scripts": {
     "prewebrew": "npm run build",
     "webrew": "./bin/webrew",
     "link": "npm run clean && npm link",
-    "clean": "rm -r ./dist",
+    "clean": "rm -r ./build",
     "prestart": "npm run build",
-    "build": "babel --no-babelrc ./src  --out-dir ./dist --ignore dist,node_modules --presets=es2015,stage-3,stage-0,babel-polyfill --plugins=transform-runtime,babel-root-import --source-maps=inline",
+    "build": "babel --no-babelrc ./  --out-dir ./build --ignore build,node_modules --presets=es2015,stage-3,stage-0,babel-polyfill --plugins=transform-runtime,babel-root-import --source-maps=inline",
     "test": "mocha --watch --require babel-polyfill --compilers js:babel-register ./modules/**/*.test.js"
   },
   "repository": {

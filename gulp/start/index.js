@@ -4,10 +4,10 @@ import { spawn } from 'cross-spawn'
 
 try {
     spawn(`gulp`, [
-        `build`,
+        `start`,
         `--require`,
         `babel-register`,
-        `--gulpfile=./../webrew/src/gulp/index.js`,
+        `--gulpfile=./../webrew/gulp/index.js`,
         `--cwd=./`,
     ], { stdio: `inherit` })
 }
