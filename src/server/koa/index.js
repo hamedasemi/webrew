@@ -7,14 +7,6 @@ import serve from 'koa-static'
 import { debug, error } from 'webrew-helpers-log'
 import logger from './koa-log'
 
-export class KoaServer {
-    constructor(data) {
-        debug(data.name)
-    }
-}
-
-export default KoaServer
-
 /**
 * --------------------------------------------------
 * Components
@@ -51,6 +43,7 @@ app.use(logger)
 * --------------------------------------------------
 */
 app.use(serve((process.env.WWW || `www`) + `/`))
+app.use(serve(`client`))
 
 
 /**
