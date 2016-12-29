@@ -12,7 +12,7 @@ deploy:
     repo: hamedasemi/webrew
     tags: true
     branch: mainline
-    condition: "$TRAVIS_TAG =~ ^release.*$"
+    # condition: "$TRAVIS_TAG =~ ^release.*$"
 before_install:
   - npm run clean
 install:
