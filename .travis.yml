@@ -10,7 +10,9 @@ deploy:
     secure: $NPM_API_KEY
   on:
     repo: hamedasemi/webrew
+    tags: true
     branch: mainline
+    condition: "$TRAVIS_TAG =~ ^release.*$"
 before_install:
   - npm run clean
 install:
