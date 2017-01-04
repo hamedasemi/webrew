@@ -43,8 +43,8 @@ app.use(logger)
 * --------------------------------------------------
 */
 app.use(serve((process.env.WWW || `www`) + `/`))
-app.use(serve(`client`))
-
+app.use(serve((process.env.ASSETS || `assets`) + `/`))
+app.use(serve((process.env.APP || `app`) + `/`))
 
 /**
 * --------------------------------------------------
