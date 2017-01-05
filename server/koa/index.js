@@ -42,9 +42,9 @@ app.use(logger)
 * Static Stream server
 * --------------------------------------------------
 */
-app.use(serve((process.env.WWW || `www`) + `/`))
-app.use(serve((process.env.ASSETS || `assets`) + `/`))
-app.use(serve((process.env.APP || `app`) + `/`))
+app.use(serve((process.env.ROOT || `.`) + `/`))
+app.use(serve((process.env.WWW || `./www`) + `/`))
+app.use(serve((process.env.APP || `./app`) + `/`))
 
 /**
 * --------------------------------------------------
